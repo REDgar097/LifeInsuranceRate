@@ -36,18 +36,16 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $('#calcButton').click(function () {
-          calculateMortageRate();
+          let age = $('#ageNumber').val();
+          let result = 5 * age + 300;
+          $('#rateDisplay')
+            .fadeIn('3000')
+            .text('Your Life Insurance Rate is ' + Number(result));
         });
         $('#clearButton').click(function () {
           clearTextBox();
         });
       });
-
-      function calculateMortageRate() {
-        let age = $('#ageNumber').val();
-        let result = 5 * age + 300;
-        $('#rateDisplay').text('Your Mortage Rate is ' + Number(result));
-      }
 
       function clearTextBox() {
         $('#ageNumber').val('');
