@@ -22,7 +22,7 @@
     <input type="number" id="ageNumber" placeholder="Enter your age" />
     <button id="calcButton">Calculate</button>
     <button id="clearButton">Clear</button>
-    <p id="rateDisplay"></p>
+    <p id="rateDisplay" style="display: none"></p>
 
     <!-- Optional JavaScript; choose one of the two! -- />
 
@@ -39,18 +39,16 @@
           let age = $('#ageNumber').val();
           let result = 5 * age + 300;
           $('#rateDisplay')
-            .fadeIn('3000')
-            .text('Your Life Insurance Rate is ' + Number(result));
+            .text('Your Life Insurance Rate is ' + Number(result))
+            .fadeIn(1000);
         });
         $('#clearButton').click(function () {
-          clearTextBox();
+          $('#rateDisplay').fadeOut(1000, function () {
+            $('#ageNumber').val('');
+            $('#rateDisplay').empty();
+          });
         });
       });
-
-      function clearTextBox() {
-        $('#ageNumber').val('');
-        $('#rateDisplay').empty();
-      }
     </script>
   </body>
 </html>
