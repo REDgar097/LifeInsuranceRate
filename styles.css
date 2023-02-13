@@ -44,12 +44,3 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
-
-.calculator {
-  display: flexbox;
-  justify-content: center;
-}
-
-.visibleborders {
-  border: 3px solid black;
-}
