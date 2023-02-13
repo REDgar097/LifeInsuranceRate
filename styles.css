@@ -46,6 +46,6 @@ h1 {
 }
 
 .calculator {
-  display: flex;
+  display: flexbox;
   justify-content: center;
 }
