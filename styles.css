@@ -49,3 +49,7 @@ h1 {
   display: flexbox;
   justify-content: center;
 }
+
+.visibleborders {
+  border: 3px solid black;
+}
