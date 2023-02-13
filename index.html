@@ -48,7 +48,6 @@
     <h1>Life Insurance Calculator</h1>
     <div>
       <input type="number" id="ageNumber" placeholder="Enter your age" />
-
       <button id="calcButton">Calculate</button>
       <button id="clearButton">Clear</button>
     </div>
@@ -65,19 +64,19 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $('#calcButton').click(function () {
-          let age = $('#ageNumber').val();
+        $("#calcButton").click(function () {
+          let age = $("#ageNumber").val();
           let result = 5 * age + 300;
-          $('#rateDisplay')
+          $("#rateDisplay")
             .text(
-              'Your Life Insurance Rate is $' + Number(result) + ' per year'
+              "Your Life Insurance Rate is $" + Number(result) + " per year"
             )
             .fadeIn(1000);
         });
-        $('#clearButton').click(function () {
-          $('#rateDisplay').fadeOut(1000, function () {
-            $('#ageNumber').val('');
-            $('#rateDisplay').empty();
+        $("#clearButton").click(function () {
+          $("#rateDisplay").fadeOut(1000, function () {
+            $("#ageNumber").val("");
+            $("#rateDisplay").empty();
           });
         });
       });
