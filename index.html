@@ -15,11 +15,32 @@
 
     <title>Hello, world!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 24pt;
+        margin: 20px;
+      }
+
+      p {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        font-style: bold;
+        font-size: 18pt;
+      }
+    </style>
   </head>
 
   <body>
-    <h1 style="text-align: center">Life Insurance Calculator</h1>
-    <input type="number" id="ageNumber" placeholder="Enter your age" />
+    <h1>Life Insurance Calculator</h1>
+    <input
+      type="number"
+      id="ageNumber"
+      placeholder="Enter your age"
+      style="margin-left: 125px"
+    />
     <button id="calcButton">Calculate</button>
     <button id="clearButton">Clear</button>
 
@@ -40,7 +61,9 @@
           let age = $('#ageNumber').val();
           let result = 5 * age + 300;
           $('#rateDisplay')
-            .text('Your Life Insurance Rate is ' + Number(result))
+            .text(
+              'Your Life Insurance Rate is $' + Number(result) + ' per year'
+            )
             .fadeIn(1000);
         });
         $('#clearButton').click(function () {
